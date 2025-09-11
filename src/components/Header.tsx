@@ -26,12 +26,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-3 group cursor-pointer"
+            className="flex items-center gap-3 cursor-pointer"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-              <BookOpen className="w-8 h-8 text-violet-600 relative z-10 group-hover:text-indigo-700 transition-colors duration-300" />
-            </div>
+            <BookOpen className="w-8 h-8 text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-600" />
             <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               uSchool
             </h1>
@@ -43,9 +40,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.div whileHover={{ y: -2 }}>
               <Link
                 to="/"
-                className="flex items-center gap-2 text-gray-600 hover:text-violet-600 transition-colors duration-300 group text-sm font-medium"
+                className="flex items-center gap-2 text-gray-600 hover:text-violet-600 transition-colors duration-300 text-sm font-medium"
               >
-                <HomeIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-violet-500" />
+                <HomeIcon className="w-4 h-4 text-violet-500" />
                 Home
               </Link>
             </motion.div>
@@ -54,9 +51,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('features')}
-              className="flex items-center gap-2 text-gray-600 hover:text-violet-600 transition-colors duration-300 group text-sm font-medium"
+              className="flex items-center gap-2 text-gray-600 hover:text-violet-600 transition-colors duration-300 text-sm font-medium"
             >
-              <Sparkles className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-indigo-500" />
+              <Sparkles className="w-4 h-4 text-indigo-500" />
               Features
             </motion.button>
 
@@ -64,9 +61,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('download')}
-              className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300 group text-sm font-medium"
+              className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300 text-sm font-medium"
             >
-              <Download className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-blue-500" />
+              <Download className="w-4 h-4 text-blue-500" />
               Download
             </motion.button>
 
@@ -74,9 +71,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.div whileHover={{ y: -2 }}>
               <Link
                 to="/privacy"
-                className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 group text-sm font-medium"
+                className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 text-sm font-medium"
               >
-                <Shield className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-emerald-500" />
+                <Shield className="w-4 h-4 text-emerald-500" />
                 Privacy
               </Link>
             </motion.div>
