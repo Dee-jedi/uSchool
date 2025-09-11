@@ -15,57 +15,13 @@ const Hero: React.FC = () => {
   const statsRef = useRef(null);
   const isInView = useInView(statsRef, { once: true, margin: '-100px' });
 
-  const features = [
-    {
-      icon: BookOpen,
-      text: 'Lecture Notes',
-      gradient: 'from-emerald-400 to-emerald-600',
-    },
-    {
-      icon: FileText,
-      text: 'Past Questions',
-      gradient: 'from-blue-400 to-blue-600',
-    },
-    {
-      icon: Search,
-      text: 'Easy Search',
-      gradient: 'from-violet-400 to-violet-600',
-    },
-    {
-      icon: CheckCircle,
-      text: 'Verified Content',
-      gradient: 'from-indigo-400 to-indigo-600',
-    },
-  ];
-
-  const stats = [
-    {
-      number: 10000,
-      label: 'Study Materials',
-      gradient: 'from-violet-500 to-indigo-600',
-      suffix: '+',
-    },
-    {
-      number: 100,
-      label: 'Coverage',
-      gradient: 'from-blue-500 to-indigo-600',
-      suffix: '%',
-    },
-    {
-      number: 24,
-      label: 'Access',
-      gradient: 'from-indigo-500 to-purple-600',
-      suffix: '/7',
-    },
-  ];
-
   return (
     <section
       id="hero"
       className="relative overflow-hidden bg-gradient-to-br from-white via-slate-50 to-gray-100 py-16 lg:py-28"
     >
       {/* Background decorative elements */}
-      <div className="absolute top-0 left-0 w-full h-full opacity-80">
+      <div className="absolute top-0 left-0 w-full h-full opacity-8">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-violet-200 to-purple-300 rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-gradient-to-r from-blue-200 to-indigo-300 rounded-full blur-3xl"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-r from-emerald-200 to-teal-300 rounded-full blur-3xl opacity-40"></div>
@@ -87,15 +43,17 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-100 to-purple-100 border border-violet-200 text-violet-700 px-4 py-2 rounded-full mb-6 shadow-sm"
             >
-              <Star className="w-4 h-4 text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-600 fill-current" />
+              <Star className="w-4 h-4 fill-violet-500 text-violet-500" />
               <span className="text-sm font-medium">
-                The Ultimate Academic Resource
+                {' '}
+                The Ultimate Academic Resource{' '}
               </span>
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
               <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                If you can't find it here,
+                {' '}
+                If you can't find it here,{' '}
               </span>
               <br />
               <span className="text-gray-900">you can't find it elsewhere</span>
@@ -109,20 +67,33 @@ const Hero: React.FC = () => {
 
             {/* Features Grid */}
             <div className="grid grid-cols-2 gap-4 mb-8">
-              {features.map((item, index) => (
+              {[
+                {
+                  icon: BookOpen,
+                  text: 'Lecture Notes',
+                  color: 'text-emerald-600',
+                },
+                {
+                  icon: FileText,
+                  text: 'Past Questions',
+                  color: 'text-blue-600',
+                },
+                { icon: Search, text: 'Easy Search', color: 'text-violet-600' },
+                {
+                  icon: CheckCircle,
+                  text: 'Verified Content',
+                  color: 'text-indigo-600',
+                },
+              ].map((item, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-2 text-gray-700"
                 >
-                  <item.icon
-                    className={`w-5 h-5 text-transparent bg-clip-text bg-gradient-to-r ${item.gradient}`}
-                  />
-                  <span className="text-sm font-medium text-gray-900">
-                    {item.text}
-                  </span>
+                  <item.icon className={`w-5 h-5 ${item.color}`} />
+                  <span className="text-sm font-medium">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -173,11 +144,28 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.8 }}
               className="flex flex-wrap gap-6 mt-8 justify-center lg:justify-start"
             >
-              {stats.map((stat, index) => (
+              {[
+                {
+                  number: 10000,
+                  label: 'Study Materials',
+                  color: 'text-violet-600',
+                  suffix: '+',
+                },
+                {
+                  number: 100,
+                  label: 'Coverage',
+                  color: 'text-blue-600',
+                  suffix: '%',
+                },
+                {
+                  number: 24,
+                  label: 'Access',
+                  color: 'text-indigo-600',
+                  suffix: '/7',
+                },
+              ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div
-                    className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${stat.gradient}`}
-                  >
+                  <div className={`text-2xl font-bold ${stat.color}`}>
                     <CountUp
                       end={stat.number}
                       suffix={stat.suffix}
@@ -212,7 +200,7 @@ const Hero: React.FC = () => {
               transition={{ duration: 3, repeat: Infinity }}
               className="absolute -top-4 -left-4 bg-white/90 backdrop-blur-lg p-3 rounded-2xl shadow-xl z-20 border border-gray-200"
             >
-              <FileText className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600" />
+              <FileText className="w-6 h-6 text-blue-600" />
             </motion.div>
 
             <motion.div
@@ -220,18 +208,19 @@ const Hero: React.FC = () => {
               transition={{ duration: 4, repeat: Infinity, delay: 1 }}
               className="absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-lg p-3 rounded-2xl shadow-xl z-20 border border-gray-200"
             >
-              <BookOpen className="w-6 h-6 text-transparent bg-clip-text bg-gradient-to-r from-violet-500 to-indigo-600" />
+              <BookOpen className="w-6 h-6 text-violet-600" />
             </motion.div>
 
+            {/* Additional floating element */}
             <motion.div
               animate={{ y: [0, -8, 0], rotate: [0, 5, 0] }}
               transition={{ duration: 5, repeat: Infinity, delay: 2 }}
               className="absolute top-1/2 -right-8 bg-white/90 backdrop-blur-lg p-2 rounded-xl shadow-xl z-20 border border-gray-200"
             >
-              <Star className="w-4 h-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600 fill-current" />
+              <Star className="w-4 h-4 text-indigo-600 fill-indigo-600" />
             </motion.div>
 
-            {/* Decorative gradient orbs */}
+            {/* Decorative gradient orbs around the image */}
             <div className="absolute -top-8 -right-8 w-16 h-16 bg-gradient-to-r from-violet-400 to-purple-500 rounded-full opacity-20 blur-lg"></div>
             <div className="absolute -bottom-8 -left-8 w-20 h-20 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full opacity-20 blur-lg"></div>
           </motion.div>
