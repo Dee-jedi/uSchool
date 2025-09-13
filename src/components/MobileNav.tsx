@@ -39,8 +39,8 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <div className="flex items-center gap-3">
-                <BookOpen className="w-7 h-7 text-violet-600" />
-                <span className="text-xl font-bold bg-gradient-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+                <BookOpen className="w-7 h-7 text-emerald-600" />
+                <span className="text-xl font-bold bg-gradient-to-r from-emerald-600 to-green-700 bg-clip-text text-transparent">
                   uSchool
                 </span>
               </div>
@@ -61,10 +61,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 to="/"
                 onClick={onClose}
                 whileHover={{ x: 8 }}
-                className="flex items-center gap-4 p-4 rounded-xl hover:bg-violet-50 transition-colors duration-300 group"
+                className="flex items-center gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors duration-300 group"
               >
-                <div className="p-2 bg-violet-100 rounded-lg group-hover:bg-violet-200 transition-colors duration-300">
-                  <Home className="w-5 h-5 text-violet-600" />
+                <div className="p-2 bg-emerald-100 rounded-lg group-hover:bg-emerald-200 transition-colors duration-300">
+                  <Home className="w-5 h-5 text-emerald-600" />
                 </div>
                 <span className="text-lg font-medium text-gray-900">Home</span>
               </MotionLink>
@@ -76,10 +76,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                   onClose();
                 }}
                 whileHover={{ x: 8 }}
-                className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-violet-50 transition-colors duration-300 group text-left"
+                className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition-colors duration-300 group text-left"
               >
-                <div className="p-2 bg-violet-100 rounded-lg group-hover:bg-violet-200 transition-colors duration-300">
-                  <Sparkles className="w-5 h-5 text-violet-600" />
+                <div className="p-2 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors duration-300">
+                  <Sparkles className="w-5 h-5 text-green-700" />
                 </div>
                 <span className="text-lg font-medium text-gray-900">
                   Features
@@ -93,10 +93,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                   onClose();
                 }}
                 whileHover={{ x: 8 }}
-                className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-blue-50 transition-colors duration-300 group text-left"
+                className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors duration-300 group text-left"
               >
-                <div className="p-2 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors duration-300">
-                  <Download className="w-5 h-5 text-blue-600" />
+                <div className="p-2 bg-emerald-100 rounded-lg group-hover:bg-emerald-200 transition-colors duration-300">
+                  <Download className="w-5 h-5 text-emerald-700" />
                 </div>
                 <span className="text-lg font-medium text-gray-900">
                   Download
@@ -108,10 +108,10 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 to="/privacy"
                 onClick={onClose}
                 whileHover={{ x: 8 }}
-                className="flex items-center gap-4 p-4 rounded-xl hover:bg-indigo-50 transition-colors duration-300 group"
+                className="flex items-center gap-4 p-4 rounded-xl hover:bg-green-50 transition-colors duration-300 group"
               >
-                <div className="p-2 bg-indigo-100 rounded-lg group-hover:bg-indigo-200 transition-colors duration-300">
-                  <Shield className="w-5 h-5 text-indigo-600" />
+                <div className="p-2 bg-green-100 rounded-lg group-hover:bg-green-200 transition-colors duration-300">
+                  <Shield className="w-5 h-5 text-green-700" />
                 </div>
                 <span className="text-lg font-medium text-gray-900">
                   Privacy Policy

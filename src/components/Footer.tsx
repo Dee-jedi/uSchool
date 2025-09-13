@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
     <footer className="w-full bg-gray-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-10 space-y-8">
         {/* Branding */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+        <div className="text-center hidden sm:flex">
+          <h3 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 via-green-600 to-emerald-800 bg-clip-text text-transparent">
             uSchool
           </h3>
           <p className="mt-2 text-gray-600 text-sm leading-relaxed">
@@ -23,13 +23,13 @@ const Footer: React.FC = () => {
           <div className="flex gap-6 text-sm">
             <Link
               to="/privacy"
-              className="hover:text-purple-600 text-gray-500 transition-colors"
+              className="hover:text-emerald-600 text-gray-500 transition-colors"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms"
-              className="hover:text-purple-600 text-gray-500 transition-colors"
+              className="hover:text-emerald-600 text-gray-500 transition-colors"
             >
               Terms of Service
             </Link>
@@ -68,12 +68,12 @@ const Footer: React.FC = () => {
 
           {/* Contact */}
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-full bg-blue-100">
-              <MdEmail className="w-4 h-4 text-blue-600" />
+            <div className="p-2 rounded-full bg-emerald-100">
+              <MdEmail className="w-4 h-4 text-emerald-600" />
             </div>
             <a
               href="mailto:support@uschool.com"
-              className="text-sm text-gray-600 hover:text-purple-600 transition-colors"
+              className="text-sm text-gray-600 hover:text-emerald-600 transition-colors"
             >
               support@uschool.com
             </a>

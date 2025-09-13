@@ -29,10 +29,10 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             className="flex items-center gap-3 group cursor-pointer"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-500 to-indigo-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-              <BookOpen className="w-8 h-8 text-violet-600 relative z-10 group-hover:text-indigo-700 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-green-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+              <BookOpen className="w-8 h-8 text-emerald-600 relative z-10 group-hover:text-green-700 transition-colors duration-300" />
             </div>
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-600 via-green-700 to-emerald-800 bg-clip-text text-transparent">
               uSchool
             </h1>
           </motion.div>
@@ -43,9 +43,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.div whileHover={{ y: -2 }}>
               <Link
                 to="/"
-                className="flex items-center gap-2 text-gray-600 hover:text-violet-600 transition-colors duration-300 group text-sm font-medium"
+                className="flex items-center gap-2 text-gray-600 hover:text-emerald-600 transition-colors duration-300 group text-sm font-medium"
               >
-                <HomeIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-violet-500" />
+                <HomeIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-emerald-500" />
                 Home
               </Link>
             </motion.div>
@@ -54,9 +54,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('features')}
-              className="flex items-center gap-2 text-gray-600 hover:text-violet-600 transition-colors duration-300 group text-sm font-medium"
+              className="flex items-center gap-2 text-gray-600 hover:text-green-700 transition-colors duration-300 group text-sm font-medium"
             >
-              <Sparkles className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-indigo-500" />
+              <Sparkles className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-green-600" />
               Features
             </motion.button>
 
@@ -64,9 +64,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.button
               whileHover={{ y: -2 }}
               onClick={() => scrollToSection('download')}
-              className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-300 group text-sm font-medium"
+              className="flex items-center gap-2 text-gray-600 hover:text-emerald-700 transition-colors duration-300 group text-sm font-medium"
             >
-              <Download className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-blue-500" />
+              <Download className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-emerald-600" />
               Download
             </motion.button>
 
@@ -74,9 +74,9 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.div whileHover={{ y: -2 }}>
               <Link
                 to="/privacy"
-                className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors duration-300 group text-sm font-medium"
+                className="flex items-center gap-2 text-gray-600 hover:text-green-700 transition-colors duration-300 group text-sm font-medium"
               >
-                <Shield className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-emerald-500" />
+                <Shield className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-green-600" />
                 Privacy
               </Link>
             </motion.div>
@@ -85,7 +85,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-gradient-to-r from-violet-600 to-indigo-700 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:from-violet-700 hover:to-indigo-800 shadow-lg hover:shadow-violet-500/25 transition-all duration-300"
+              className="bg-gradient-to-r from-emerald-600 to-green-700 text-white px-6 py-2.5 rounded-full text-sm font-medium hover:from-emerald-700 hover:to-green-800 shadow-lg hover:shadow-green-500/25 transition-all duration-300"
             >
               Get Started
             </motion.button>

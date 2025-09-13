@@ -63,7 +63,7 @@ const features = [
 
 const Features: React.FC = () => {
   return (
-    <section id="features" className="relative py-20 bg-gray-50">
+    <section id="features" className="relative pt-20 pb-8 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section heading */}
         <motion.div
@@ -92,10 +92,13 @@ const Features: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: groupIndex * 0.2 }}
             >
-              {/* Category Title */}
-              <h3 className="text-xl font-semibold text-violet-600 mb-6 text-center lg:text-left">
-                {group.category}
-              </h3>
+              {/* Category Title with accent dot */}
+              <div className="flex items-center gap-2 mb-6 justify-center lg:justify-start">
+                <h3 className="text-xl font-semibold text-emerald-700">
+                  {group.category}
+                </h3>
+                <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
+              </div>
 
               {/* Features Grid */}
               <div className="grid md:grid-cols-2 gap-8">
@@ -106,8 +109,8 @@ const Features: React.FC = () => {
                     transition={{ type: 'spring', stiffness: 200 }}
                     className="flex items-start gap-4 bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div className="flex-shrink-0 p-3 bg-violet-50 rounded-xl">
-                      <item.icon className="w-6 h-6 text-violet-600" />
+                    <div className="flex-shrink-0 p-3 bg-emerald-50 rounded-xl">
+                      <item.icon className="w-6 h-6 text-emerald-600" />
                     </div>
                     <div>
                       <h4 className="text-lg font-semibold text-gray-900">
