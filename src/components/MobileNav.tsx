@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { X, Download, Shield, Sparkles, BookOpen, Home } from 'lucide-react';
+import { X, Shield, Sparkles, BookOpen, Home } from 'lucide-react';
 import { useScrollToSection } from '../hooks/useScrollToSection';
 
 const MotionLink = motion.create(Link);
@@ -83,23 +83,6 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose }) => {
                 </div>
                 <span className="text-lg font-medium text-gray-900">
                   Features
-                </span>
-              </motion.button>
-
-              {/* Download */}
-              <motion.button
-                onClick={() => {
-                  scrollToSection('download');
-                  onClose();
-                }}
-                whileHover={{ x: 8 }}
-                className="w-full flex items-center gap-4 p-4 rounded-xl hover:bg-emerald-50 transition-colors duration-300 group text-left"
-              >
-                <div className="p-2 bg-emerald-100 rounded-lg group-hover:bg-emerald-200 transition-colors duration-300">
-                  <Download className="w-5 h-5 text-emerald-700" />
-                </div>
-                <span className="text-lg font-medium text-gray-900">
-                  Download
                 </span>
               </motion.button>
 

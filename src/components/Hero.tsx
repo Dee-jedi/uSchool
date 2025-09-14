@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
               <motion.a
                 whileHover={{ scale: 0.95, y: -2 }} // reduced on hover
                 whileTap={{ scale: 0.9 }}
-                href="#download"
+                href="https://play.google.com/store/apps/details?id=com.duolingo"
                 className="block"
               >
                 <img
@@ -128,7 +128,7 @@ const Hero: React.FC = () => {
               <motion.a
                 whileHover={{ scale: 0.95, y: -2 }} // reduced on hover
                 whileTap={{ scale: 0.9 }}
-                href="#download"
+                href="https://apps.apple.com/app/id570060128"
                 className="block"
               >
                 <img
