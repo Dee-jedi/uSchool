@@ -131,6 +131,18 @@ const Privacy: React.FC = () => {
         </a>
         .
       </p>
+
+      {/* Section 9 */}
+      <h2 className="mt-8 text-xl font-semibold text-gray-800">
+        9. Camera Access
+      </h2>
+      <p className="mt-2 text-gray-600 leading-relaxed">
+        The uSchool app may request permission to access your device's camera.
+        This permission is used solely for in-app features such as capturing
+        profile pictures or uploading marketplace images. Photos taken through
+        the app are not stored on our servers or shared with third parties. You
+        can revoke camera permissions at any time from your device settings.
+      </p>
     </div>
   );
 };
