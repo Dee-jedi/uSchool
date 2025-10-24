@@ -100,12 +100,14 @@ const Privacy: React.FC = () => {
 
       {/* Section 6 */}
       <h2 className="mt-8 text-xl font-semibold text-gray-800">
-        6. Your Choices
+        6. Account Deletion
       </h2>
       <p className="mt-2 text-gray-600 leading-relaxed">
-        You can update or delete your account at any time. You can disable
-        notifications in your device settings or within the app (where
-        applicable).
+        You can request deletion of your uSchool account at any time. Visit our{' '}
+        <a href="/account" className="text-purple-600 hover:underline">
+          Delete Account page
+        </a>{' '}
+        to learn how to permanently remove your account and data.
       </p>
 
       {/* Section 7 */}

@@ -9,6 +9,7 @@ import {
 } from './components';
 import { useState, useEffect } from 'react';
 import Privacy from './pages/Privacy';
+import Account from './pages/Account';
 import Terms from './pages/Terms';
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
 
           {/* Privacy & Terms pages */}
           <Route path="/privacy" element={<Privacy />} />
+          <Route path="/account" element={<Account />} />
           <Route path="/terms" element={<Terms />} />
         </Routes>
       </main>

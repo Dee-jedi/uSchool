@@ -90,6 +90,17 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               </Link>
             </motion.div>
 
+            {/* Account */}
+            <motion.div whileHover={{ y: -2 }}>
+              <Link
+                to="/account"
+                className="flex items-center gap-2 text-gray-600 hover:text-green-700 transition-colors duration-300 group text-sm font-medium"
+              >
+                <Shield className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-green-600" />
+                Account
+              </Link>
+            </motion.div>
+
             {/* CTA Button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
